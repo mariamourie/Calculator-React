@@ -19,7 +19,7 @@ Full Modern Web with Javascript Course calculator project from Udemy developed b
 
 ### ⚙️ Functionality
 
-O usuário deve estar apto a:
+The user must be able to:
 
 - Clear display
 - Click on the button and see the numbers on the display

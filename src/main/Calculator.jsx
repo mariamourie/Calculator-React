@@ -24,6 +24,7 @@ export default class Calculator extends Component {
         this.setState({...initialState});
     }
     setOperation(operation) {
+        
         if(this.state.current === 0) {
             this.setState({ operation, current: 1, clearDisplay: true });
         } else {
@@ -31,7 +32,6 @@ export default class Calculator extends Component {
             const currentOperation = this.state.operation;
 
             const values = [...this.state.values];
-
             switch (currentOperation) {
                 case '+': {
                     values[0] = values[0] + values[1];
@@ -47,6 +47,10 @@ export default class Calculator extends Component {
                 }
                 case '/': {
                     values[0] = values[0] / values[1];
+                    if(isNaN(values[0]) || !isFinite(values[0])) {
+                        this.clearMemory();
+                        return
+                    }
                     break;
                 }
                 default: {
