@@ -39,8 +39,8 @@ The user must be able to:
 
 ![HTML](https://img.shields.io/badge/HTML-ff0f7b?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-ff0f7b?&style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ff0f7b?style=for-the-badge&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-ff0f7b?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-ff0f7b?style=for-the-badge&logo=javascript&logoColor=white)
+![React](https://img.shields.io/badge/React-ff0f7b?style=for-the-badge&logo=react&logoColor=white)
 
 ### 🛠️ Development Tools
 
