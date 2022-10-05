@@ -1,4 +1,4 @@
-# 📲 Calculadora
+# 📲 React Calculator
 
 Full Modern Web with Javascript Course calculator project from Udemy developed by instructor Leonardo.
 
