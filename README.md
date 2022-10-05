@@ -12,7 +12,7 @@ Full Modern Web with Javascript Course calculator project from Udemy developed b
     - Development Tools
 - What I've learned?
 - Author
-    - Instructor e Course
+    - Instructor and Course
     - Social Media
 
 ## About
