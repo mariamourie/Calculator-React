@@ -28,10 +28,13 @@ The user must be able to:
     - Subtraction
     - Division
     - Multiplication
+    - Square root
+    - The square of a number
+    - Factorial
 
 ### 📸 Screenshot
 
-![Screenshot](./src/img/calculator_screenshot.jpeg)
+![Screenshot](./src/assets/img/calculator.jpeg)
 
 ## My process
 

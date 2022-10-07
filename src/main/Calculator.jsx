@@ -12,6 +12,13 @@ const initialState = {
     current: 0
 }
 
+function fatorial(number) {
+    let result = 1;
+    for (let i = number; i > 0; i--) {
+        result = result * i;
+    }
+    return result;
+}
 export default class Calculator extends Component {
     state = {...initialState};
     constructor(props) {
@@ -45,12 +52,24 @@ export default class Calculator extends Component {
                     values[0] = values[0] * values[1];
                     break;
                 }
+                case 'x²': {
+                    values[0] = values[0] * values[0];
+                    break;
+                }
+                case '√x': {
+                    values[0] =  Math.sqrt(values[0]);
+                    break;
+                }
                 case '/': {
                     values[0] = values[0] / values[1];
                     if(isNaN(values[0]) || !isFinite(values[0])) {
                         this.clearMemory();
                         return
                     }
+                    break;
+                }
+                case '!n': {
+                    values[0] = fatorial(values[0]);
                     break;
                 }
                 default: {
@@ -68,16 +87,16 @@ export default class Calculator extends Component {
             })
         }
     }
-    addDigit(n) {
-        if(n === '.' && this.state.displayValue.includes('.')) {
+    addDigit(digit) {
+        if(digit === '.' && this.state.displayValue.includes('.')) {
             return 
         }
         const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplay;
         const currentValue = clearDisplay ? '' : this.state.displayValue;
-        const displayValue = currentValue + n;
+        const displayValue = currentValue + digit;
         this.setState({displayValue, clearDisplay: false})
 
-        if(n !== '.') {
+        if(digit !== '.') {
             const index = this.state.current;
             const newValue = parseFloat(displayValue);
             const values = [...this.state.values];
@@ -89,7 +108,9 @@ export default class Calculator extends Component {
         return (
             <div className="calculator">
                 <Display value={this.state.displayValue} />
-                <Button label="AC" click={this.clearMemory} triple/>
+                <Button label="AC" click={this.clearMemory}/>
+                <Button label="x²" click={this.setOperation}/>
+                <Button label="√x" click={this.setOperation}/>
                 <Button label="/" click={this.setOperation} operation/>
                 <Button label="7" click={this.addDigit}/>
                 <Button label="8" click={this.addDigit}/>
@@ -103,7 +124,8 @@ export default class Calculator extends Component {
                 <Button label="2" click={this.addDigit}/>
                 <Button label="3" click={this.addDigit}/>
                 <Button label="+" click={this.setOperation} operation/>
-                <Button label="0" click={this.addDigit} double/>
+                <Button label="0" click={this.addDigit} />
+                <Button label="!n" click={this.setOperation} />
                 <Button label="." click={this.addDigit}/>
                 <Button label="=" click={this.setOperation} operation/>
             </div>

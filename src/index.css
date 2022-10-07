@@ -17,13 +17,12 @@ body {
   align-items: center;
   text-align: center;
   color: rgb(255, 255, 255);
-  background: hsla(333, 100%, 53%, 1);
+  background-color: hsla(333, 100%, 53%, 1);
   background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
   background: -moz-linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
   background: -webkit-linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
   background-repeat: no-repeat;
 }
-
 footer {
   margin-top: 3em;
 }
@@ -38,5 +37,5 @@ footer ul li a {
 }
 
 footer ul li a i {
-  font-size: 2em;
+  font-size: 1.5em;
 }
