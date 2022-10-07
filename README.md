@@ -49,7 +49,7 @@ The user must be able to:
 
 - Visual Studio Code
 - Git
-- Gitbash
+- Git Bash
 - Webpack
 
 ## 👩🏽‍💻What I've learned?
