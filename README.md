@@ -2,6 +2,8 @@
 
 Full Modern Web with Javascript Course calculator project from Udemy developed by instructor Leonardo.
 
+🖇️ https://mariamourie.github.io/Calculator-React
+
 ## Table of contents
 
 - About
